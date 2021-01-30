@@ -8,6 +8,9 @@ public class Flipable : MonoBehaviour
     [SerializeField] bool FlipSpriteX = true;
     [SerializeField] bool FlipSpriteY = false;
 
+    [SerializeField] bool FlipTransformX = false;
+    [SerializeField] bool FlipTransformY = false;
+
     [SerializeField, HideInInspector] SpriteRenderer _spriteRenderer = null;
     public SpriteRenderer SpriteRenderer
     {
@@ -37,5 +40,19 @@ public class Flipable : MonoBehaviour
     {
         SpriteRenderer.flipX = FlipSpriteX ? value ^ OriginalFlipX : OriginalFlipX;
         SpriteRenderer.flipY = FlipSpriteY ? value ^ OriginalFlipY : OriginalFlipY;
+
+        Vector3 tmp = OriginalLocalScale;
+
+        if (FlipTransformX)
+        {
+            tmp.x = value ? -OriginalLocalScale.x : OriginalLocalScale.x;
+        }
+
+        if (FlipTransformY)
+        {
+            tmp.y = value ? -OriginalLocalScale.y : OriginalLocalScale.y;
+        }
+
+        transform.localScale = tmp;
     }
 }

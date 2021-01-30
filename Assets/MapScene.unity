@@ -855,6 +855,7 @@ GameObject:
   - component: {fileID: 400141972}
   - component: {fileID: 400141973}
   - component: {fileID: 400141971}
+  - component: {fileID: 400141974}
   m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
@@ -989,6 +990,23 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 46.8
     m_UpperAngle: 151.9
+--- !u!114 &400141974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400141968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52906410a7ae7ad45b2296c1ea9f06a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FlipSpriteX: 0
+  FlipSpriteY: 0
+  FlipTransformX: 1
+  FlipTransformY: 0
+  _spriteRenderer: {fileID: 0}
 --- !u!1 &414915512
 GameObject:
   m_ObjectHideFlags: 0
@@ -13170,6 +13188,7 @@ MonoBehaviour:
   moveAxisName: Move
   jumpButtonName: Jump
   _characterMovement: {fileID: 0}
+  _FlipableComponents: []
 --- !u!1 &1981125169
 GameObject:
   m_ObjectHideFlags: 0
