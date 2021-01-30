@@ -7,6 +7,7 @@ public class Flipable : MonoBehaviour
 {
     [SerializeField] bool FlipSpriteX = true;
     [SerializeField] bool FlipSpriteY = false;
+    [SerializeField] bool FlipSortingOrder = false;
 
     [SerializeField] bool FlipTransformX = false;
     [SerializeField] bool FlipTransformY = false;
@@ -43,6 +44,7 @@ public class Flipable : MonoBehaviour
     Vector3 OriginalLocalScale;
     bool OriginalFlipX;
     bool OriginalFlipY;
+    int OriginalSortingOrder;
     float OriginalHingeJointLowerAngleLimit;
     float OriginalHingeJointUpperAngleLimit;
 
@@ -54,6 +56,7 @@ public class Flipable : MonoBehaviour
         {
             OriginalFlipX = SpriteRenderer.flipX;
             OriginalFlipY = SpriteRenderer.flipY;
+            OriginalSortingOrder = SpriteRenderer.sortingOrder;
         }
         else if (FlipSpriteX || FlipSpriteY)
         {
@@ -77,6 +80,7 @@ public class Flipable : MonoBehaviour
         {
             SpriteRenderer.flipX = FlipSpriteX ? value ^ OriginalFlipX : OriginalFlipX;
             SpriteRenderer.flipY = FlipSpriteY ? value ^ OriginalFlipY : OriginalFlipY;
+            SpriteRenderer.sortingOrder = FlipSortingOrder ? -OriginalSortingOrder : OriginalSortingOrder;
         }
 
         if (HingeJoint && FlipHingeJointAngleLimits)

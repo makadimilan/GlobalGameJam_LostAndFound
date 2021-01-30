@@ -8,6 +8,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] float moveForce = 1f;
     [SerializeField] float maxSpeed = 10f;
     [SerializeField] float jumpForce = 100f;
+    [SerializeField, Range(0.0f, 0.99f)] float flipDeadZone = 0.05f;
 
     [SerializeField] ContactFilter2D groundedContactFilter;
 
@@ -36,7 +37,7 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        if (!canJump && RigidBody.IsTouching(groundedContactFilter))
+        if (!canJump && RigidBody.IsTouching(groundedContactFilter) && RigidBody.velocity.y <= 0)
         {
             canJump = true;
         }
@@ -44,7 +45,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void Move(float value)
     {
-        if ((IsFacingRight && value < 0) || (!IsFacingRight && value > 0))
+        if ((IsFacingRight && value < -flipDeadZone) || (!IsFacingRight && value > flipDeadZone))
         {
             foreach(Flipable element in flipableComponents)
             {
