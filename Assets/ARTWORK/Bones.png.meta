@@ -47,6 +47,15 @@ TextureImporter:
   - first:
       213: -1001394819874316059
     second: Bones_19
+  - first:
+      213: 5108133337276065835
+    second: Bones_7
+  - first:
+      213: -4361333571633691466
+    second: Bones_8
+  - first:
+      213: -472473101296550905
+    second: Bones_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -198,10 +207,10 @@ TextureImporter:
         serializedVersion: 2
         x: 425
         y: 883
-        width: 212
-        height: 54
+        width: 214
+        height: 55
       alignment: 9
-      pivot: {x: 0.039499313, y: 0.44968668}
+      pivot: {x: 0.029628433, y: 0.4304843}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,11 +227,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 683
-        y: 882
-        width: 109
-        height: 65
+        y: 872
+        width: 113
+        height: 84
       alignment: 9
-      pivot: {x: 0.034512494, y: 0.48542732}
+      pivot: {x: 0.067225635, y: 0.4980011}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,7 +252,7 @@ TextureImporter:
         width: 197
         height: 60
       alignment: 9
-      pivot: {x: 0.043263834, y: 0.52438474}
+      pivot: {x: 0.037902523, y: 0.46277466}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -259,12 +268,12 @@ TextureImporter:
       name: Bones_4
       rect:
         serializedVersion: 2
-        x: 428
+        x: 418
         y: 761
-        width: 208
-        height: 53
+        width: 218
+        height: 56
       alignment: 9
-      pivot: {x: 0.039118934, y: 0.47118446}
+      pivot: {x: 0.0706104, y: 0.48061588}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -301,12 +310,12 @@ TextureImporter:
       name: Bones_6
       rect:
         serializedVersion: 2
-        x: 190
-        y: 459
-        width: 173
-        height: 171
+        x: 187
+        y: 467
+        width: 166
+        height: 176
       alignment: 9
-      pivot: {x: 0.36946067, y: 0.14281246}
+      pivot: {x: 0.076332, y: 0.6136412}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -322,12 +331,12 @@ TextureImporter:
       name: Bones_10
       rect:
         serializedVersion: 2
-        x: 389
+        x: 400
         y: 473
-        width: 209
+        width: 198
         height: 166
       alignment: 9
-      pivot: {x: 0.5077083, y: 0.57857317}
+      pivot: {x: 0.5072869, y: 0.56584847}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -343,12 +352,12 @@ TextureImporter:
       name: Bones_11
       rect:
         serializedVersion: 2
-        x: 698
-        y: 493
-        width: 111
-        height: 131
+        x: 680
+        y: 489
+        width: 122
+        height: 140
       alignment: 9
-      pivot: {x: 0.116103716, y: 0.5615155}
+      pivot: {x: 0.050524604, y: 0.5583409}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -364,10 +373,10 @@ TextureImporter:
       name: Bones_14
       rect:
         serializedVersion: 2
-        x: 147
+        x: 143
         y: 264
-        width: 274
-        height: 67
+        width: 278
+        height: 69
       alignment: 9
       pivot: {x: 0.042392474, y: 0.53842384}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -387,7 +396,7 @@ TextureImporter:
         serializedVersion: 2
         x: 459
         y: 256
-        width: 268
+        width: 261
         height: 61
       alignment: 9
       pivot: {x: 0.017888058, y: 0.46068412}
@@ -406,9 +415,9 @@ TextureImporter:
       name: Bones_16
       rect:
         serializedVersion: 2
-        x: 788
+        x: 784
         y: 255
-        width: 59
+        width: 65
         height: 138
       alignment: 9
       pivot: {x: 0.0075869802, y: 0.21299656}
@@ -427,9 +436,9 @@ TextureImporter:
       name: Bones_17
       rect:
         serializedVersion: 2
-        x: 145
+        x: 142
         y: 69
-        width: 272
+        width: 275
         height: 65
       alignment: 9
       pivot: {x: 0.027340198, y: 0.45597377}
@@ -448,10 +457,10 @@ TextureImporter:
       name: Bones_18
       rect:
         serializedVersion: 2
-        x: 462
+        x: 457
         y: 72
         width: 272
-        height: 55
+        height: 57
       alignment: 9
       pivot: {x: 0.034920357, y: 0.46243185}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,12 +478,12 @@ TextureImporter:
       name: Bones_19
       rect:
         serializedVersion: 2
-        x: 784
+        x: 780
         y: 64
-        width: 56
+        width: 60
         height: 150
       alignment: 9
-      pivot: {x: 0.07533046, y: 0.2491296}
+      pivot: {x: 0.10362025, y: 0.22448562}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -482,6 +491,69 @@ TextureImporter:
       bones: []
       spriteID: 5e0a97987b45a12f0800000000000000
       internalID: -1001394819874316059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bones_7
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 525
+        width: 78
+        height: 80
+      alignment: 9
+      pivot: {x: 0.120859, y: 0.2623604}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28aba9c43cb3e640800000000000000
+      internalID: 5108133337276065835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bones_8
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 719
+        width: 83
+        height: 88
+      alignment: 9
+      pivot: {x: 0.12461173, y: 0.52400416}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4c9c3593e6973c0800000000000000
+      internalID: -4361333571633691466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bones_9
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 868
+        width: 78
+        height: 88
+      alignment: 9
+      pivot: {x: 0.1005476, y: 0.49399912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70cba47b7307179f0800000000000000
+      internalID: -472473101296550905
       vertices: []
       indices: 
       edges: []
