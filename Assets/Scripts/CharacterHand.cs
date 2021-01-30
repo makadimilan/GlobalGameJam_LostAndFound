@@ -60,7 +60,7 @@ public class CharacterHand : MonoBehaviour
             SpriteRenderer.sprite = handSprites[(int)handState];
             
             grabJoint.connectedBody = contacts[0].rigidbody;
-            grabJoint.connectedAnchor = contacts[0].point;
+            grabJoint.connectedAnchor = contacts[0].rigidbody.GetPoint(contacts[0].point);
             grabJoint.enabled = true;
         }
     }
