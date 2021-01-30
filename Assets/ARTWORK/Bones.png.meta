@@ -56,6 +56,12 @@ TextureImporter:
   - first:
       213: -472473101296550905
     second: Bones_9
+  - first:
+      213: -7743499356955606234
+    second: Bones_12
+  - first:
+      213: 3709547384785974797
+    second: Bones_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -554,6 +560,48 @@ TextureImporter:
       bones: []
       spriteID: 70cba47b7307179f0800000000000000
       internalID: -472473101296550905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bones_12
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 872
+        width: 85
+        height: 119
+      alignment: 9
+      pivot: {x: 0.0026382445, y: 0.41726863}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62302369c50998490800000000000000
+      internalID: -7743499356955606234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bones_13
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 702
+        width: 93
+        height: 136
+      alignment: 9
+      pivot: {x: -0.0043947776, y: 0.51703286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d06b5a341b5fa7330800000000000000
+      internalID: 3709547384785974797
       vertices: []
       indices: 
       edges: []
