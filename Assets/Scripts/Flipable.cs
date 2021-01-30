@@ -85,9 +85,32 @@ public class Flipable : MonoBehaviour
 
         if (HingeJoint && FlipHingeJointAngleLimits)
         {
+            float limitA = value ? OriginalHingeJointLowerAngleLimit-180 : OriginalHingeJointLowerAngleLimit;
+            float limitB = value ? OriginalHingeJointUpperAngleLimit-180 : OriginalHingeJointUpperAngleLimit;
+
+            while(limitA < -180)
+            {
+                limitA += 360;
+            }
+
+            while(limitB < -180)
+            {
+                limitB += 360;
+            }
+
+            while(limitA > 180)
+            {
+                limitA -= 360;
+            }
+
+            while(limitB > 180)
+            {
+                limitB -= 360;
+            }
+
             JointAngleLimits2D tempLimits = HingeJoint.limits;
-            tempLimits.min = value ? OriginalHingeJointLowerAngleLimit-180 : OriginalHingeJointLowerAngleLimit;
-            tempLimits.max = value ? OriginalHingeJointUpperAngleLimit-180 : OriginalHingeJointUpperAngleLimit;
+            tempLimits.min = Mathf.Min(limitA, limitB);
+            tempLimits.max = Mathf.Max(limitA, limitB);
             HingeJoint.limits = tempLimits;
         }
 
