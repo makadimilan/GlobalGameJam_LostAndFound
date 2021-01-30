@@ -80,7 +80,7 @@ public class Flipable : MonoBehaviour
         {
             SpriteRenderer.flipX = FlipSpriteX ? value ^ OriginalFlipX : OriginalFlipX;
             SpriteRenderer.flipY = FlipSpriteY ? value ^ OriginalFlipY : OriginalFlipY;
-            SpriteRenderer.sortingOrder = FlipSortingOrder ? -OriginalSortingOrder : OriginalSortingOrder;
+            SpriteRenderer.sortingOrder = value ? -OriginalSortingOrder : OriginalSortingOrder;
         }
 
         if (HingeJoint && FlipHingeJointAngleLimits)
