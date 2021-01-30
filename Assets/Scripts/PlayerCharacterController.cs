@@ -7,6 +7,7 @@ public class PlayerCharacterController : MonoBehaviour
 {
     [SerializeField] int rewiredPlayerId = 1;
     [SerializeField] string moveAxisName = "Move";
+    [SerializeField] string jumpButtonName = "Jump";
 
     [SerializeField, HideInInspector] CharacterMovement _characterMovement = null;
     public CharacterMovement CharacterMovement
@@ -31,5 +32,10 @@ public class PlayerCharacterController : MonoBehaviour
     void Update()
     {
         CharacterMovement.Move(rewiredPlayer.GetAxis(moveAxisName));
+
+        if (rewiredPlayer.GetButtonDown(jumpButtonName))
+        {
+            CharacterMovement.Jump();
+        }
     }
 }

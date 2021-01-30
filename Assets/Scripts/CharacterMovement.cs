@@ -7,6 +7,9 @@ public class CharacterMovement : MonoBehaviour
 {
     [SerializeField] float moveForce = 1f;
     [SerializeField] float maxSpeed = 10f;
+    [SerializeField] float jumpForce = 100f;
+
+    [SerializeField] ContactFilter2D groundedContactFilter;
 
     [SerializeField, HideInInspector] Rigidbody2D _rigidBody = null;
     public Rigidbody2D RigidBody
@@ -22,6 +25,8 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
+    bool _canJump = false;
+
     void Start()
     {
         
@@ -29,7 +34,10 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        
+        if (!_canJump && RigidBody.IsTouching(groundedContactFilter))
+        {
+            _canJump = true;
+        }
     }
 
     public void Move(float value)
@@ -37,6 +45,15 @@ public class CharacterMovement : MonoBehaviour
         if (Mathf.Abs(RigidBody.velocity.x) < maxSpeed)
         {
             RigidBody.AddForce(new Vector2(value * moveForce, 0.0f));
+        }
+    }
+
+    public void Jump()
+    {
+        if (_canJump)
+        {   
+            RigidBody.AddForce(new Vector2(0.0f, jumpForce));
+            _canJump = false;
         }
     }
 }
