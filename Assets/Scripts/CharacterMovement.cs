@@ -78,7 +78,7 @@ public class CharacterMovement : MonoBehaviour
             RigidBody.AddForce(new Vector2(value * moveForce * RigidBody.mass, 0.0f));
         }
 
-        Animator.SetFloat("Speed", Mathf.Abs(value));
+        Animator.SetFloat("MoveSpeed", Mathf.Abs(value));
     }
 
     public void Jump()
