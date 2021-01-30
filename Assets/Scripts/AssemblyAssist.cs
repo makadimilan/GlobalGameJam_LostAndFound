@@ -13,6 +13,7 @@ public class AssemblyAssist : MonoBehaviour
     }
 
     [SerializeField] AssistSetting setting = new AssistSetting();
+    [SerializeField] bool UseLocalSpace = false;
 
     Rigidbody2D rb;
 	void Start ()
@@ -22,8 +23,8 @@ public class AssemblyAssist : MonoBehaviour
 
     void FixedUpdate()
     {
-        float angle = transform.eulerAngles.z;
-        
+        float angle = UseLocalSpace ? transform.eulerAngles.z : transform.localEulerAngles.z;
+
         while (angle > 180f)
         {
             angle -= 360f;
