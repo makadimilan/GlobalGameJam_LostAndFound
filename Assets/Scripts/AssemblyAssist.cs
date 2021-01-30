@@ -23,7 +23,7 @@ public class AssemblyAssist : MonoBehaviour
 
     void FixedUpdate()
     {
-        float angle = UseLocalSpace ? transform.eulerAngles.z : transform.localEulerAngles.z;
+        float angle = UseLocalSpace ? transform.localEulerAngles.z : transform.eulerAngles.z;
 
         while (angle > 180f)
         {
