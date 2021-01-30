@@ -9,7 +9,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] float maxSpeed = 10f;
     [SerializeField] float jumpForce = 100f;
     [SerializeField, Range(0.0f, 0.99f)] float flipDeadZone = 0.05f;
-
+    [SerializeField] Rigidbody2D[] groundedCheckRigidbodies;
     [SerializeField] ContactFilter2D groundedContactFilter;
 
     [SerializeField, HideInInspector] Rigidbody2D _rigidBody = null;
@@ -37,9 +37,12 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        if (!canJump && RigidBody.IsTouching(groundedContactFilter) && RigidBody.velocity.y <= 0)
+        for(int i = 0; i < groundedCheckRigidbodies.Length; i++)
         {
-            canJump = true;
+            if (!canJump && groundedCheckRigidbodies[i].IsTouching(groundedContactFilter) && groundedCheckRigidbodies[i].velocity.y <= 0)
+            {
+                canJump = true;
+            }
         }
     }
 
