@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D)), RequireComponent(typeof(Animator))]
 public class CharacterMovement : MonoBehaviour
 {
     [SerializeField] float moveForce = 1f;
@@ -11,9 +11,9 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField, Range(0.0f, 0.99f)] float flipDeadZone = 0.05f;
     [SerializeField] Rigidbody2D[] groundedCheckRigidbodies = null;
     [SerializeField] ContactFilter2D groundedContactFilter = new ContactFilter2D();
-    [SerializeField] Rigidbody2D ArmTarget = null; 
-    [SerializeField] float ArmTargetLenght = 1;
-    [SerializeField] AnimationCurve ArmTargeFrequency = AnimationCurve.Linear(0,0, 1,1);
+    [SerializeField] Rigidbody2D armTarget = null; 
+    [SerializeField] float armTargetLenght = 1;
+    [SerializeField] AnimationCurve armTargeFrequency = AnimationCurve.Linear(0,0, 1,1);
 
     [SerializeField, HideInInspector] Rigidbody2D _rigidBody = null;
     public Rigidbody2D RigidBody
@@ -47,11 +47,13 @@ public class CharacterMovement : MonoBehaviour
     bool IsFacingRight = true;
     Flipable[] flipableComponents = null;
     SpringJoint2D[] armTargetSpringJoints = null;
+    CharacterHand[] handComponents = null;
 
     void Awake()
     {
         flipableComponents = GetComponentsInChildren<Flipable>();
-        armTargetSpringJoints = ArmTarget.GetComponents<SpringJoint2D>();
+        armTargetSpringJoints = armTarget.GetComponents<SpringJoint2D>();
+        handComponents = GetComponentsInChildren<CharacterHand>();
     }
 
     void Update()
@@ -93,11 +95,11 @@ public class CharacterMovement : MonoBehaviour
             value = value.normalized;
         }
 
-        ArmTarget.transform.localPosition = value * ArmTargetLenght;
+        armTarget.transform.localPosition = value * armTargetLenght;
 
         for(int i = 0; i < armTargetSpringJoints.Length; i++)
         {
-            armTargetSpringJoints[i].frequency = 0.0001f + ArmTargeFrequency.Evaluate(value.magnitude);
+            armTargetSpringJoints[i].frequency = 0.0001f + armTargeFrequency.Evaluate(value.magnitude);
         }
     }
 
@@ -109,5 +111,13 @@ public class CharacterMovement : MonoBehaviour
             canJump = false;
             Animator.SetBool("IsGrounded", false);
         }
+    }
+
+    public void SetHandGrab(bool value)
+    {
+        for(int i = 0; i < handComponents.Length; i++)
+        {
+            handComponents[i].SetHandGrab(value);
+        }   
     }
 }

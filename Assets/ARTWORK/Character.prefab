@@ -1222,6 +1222,8 @@ GameObject:
   - component: {fileID: 8028485963895978850}
   - component: {fileID: 8028485963895978848}
   - component: {fileID: 1870373587}
+  - component: {fileID: 8028485963898210778}
+  - component: {fileID: 8028485963898210777}
   m_Layer: 7
   m_Name: Palm_Front
   m_TagString: Untagged
@@ -1390,6 +1392,63 @@ MonoBehaviour:
   FlipHingeJointAngleLimits: 0
   _spriteRenderer: {fileID: 0}
   _hingeJoint: {fileID: 0}
+--- !u!114 &8028485963898210778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8028485963895978855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5512a6a0781cdb54c936b9735565a3ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handContactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  handSprites:
+  - {fileID: 2394847500092774128, guid: 38cc99bd6458585478b679fb9d26ba2a, type: 3}
+  - {fileID: 21300000, guid: 64b64113615d0ac4384f655a84cdf64d, type: 3}
+  - {fileID: -4361333571633691466, guid: 38cc99bd6458585478b679fb9d26ba2a, type: 3}
+  grabJoint: {fileID: 8028485963898210777}
+  _rigidBody: {fileID: 0}
+  _spriteRenderer: {fileID: 0}
+--- !u!233 &8028485963898210777
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8028485963895978855}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0.92, y: 0}
+  m_ConnectedAnchor: {x: 0.94501853, y: -1.4780385}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 1
+  m_AngleLimits:
+    m_LowerAngle: 35.87729
+    m_UpperAngle: 68.05518
 --- !u!1 &8028485963965705434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,6 +1925,8 @@ GameObject:
   - component: {fileID: 8028485964290707691}
   - component: {fileID: 8028485964290707690}
   - component: {fileID: 2083010561}
+  - component: {fileID: 8028485963898210780}
+  - component: {fileID: 8028485963898210779}
   m_Layer: 7
   m_Name: Palm_Back
   m_TagString: Untagged
@@ -2034,6 +2095,63 @@ MonoBehaviour:
   FlipHingeJointAngleLimits: 0
   _spriteRenderer: {fileID: 0}
   _hingeJoint: {fileID: 0}
+--- !u!114 &8028485963898210780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8028485964290707695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5512a6a0781cdb54c936b9735565a3ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handContactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  handSprites:
+  - {fileID: 2394847500092774128, guid: 38cc99bd6458585478b679fb9d26ba2a, type: 3}
+  - {fileID: 21300000, guid: 64b64113615d0ac4384f655a84cdf64d, type: 3}
+  - {fileID: -4361333571633691466, guid: 38cc99bd6458585478b679fb9d26ba2a, type: 3}
+  grabJoint: {fileID: 8028485963898210779}
+  _rigidBody: {fileID: 0}
+  _spriteRenderer: {fileID: 0}
+--- !u!233 &8028485963898210779
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8028485964290707695}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0.92, y: 0}
+  m_ConnectedAnchor: {x: -4.1281695, y: -2.1927996}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 1
+  m_AngleLimits:
+    m_LowerAngle: 76.8
+    m_UpperAngle: 121.4
 --- !u!1 &8028485964375133950
 GameObject:
   m_ObjectHideFlags: 0
@@ -3577,6 +3695,7 @@ MonoBehaviour:
   horizontalAimAxisName: AimX
   verticalAimAxisName: AimY
   jumpButtonName: Jump
+  grabButtonName: Grab
   _characterMovement: {fileID: 0}
 --- !u!114 &8028485965847445631
 MonoBehaviour:
@@ -3609,30 +3728,30 @@ MonoBehaviour:
       m_Bits: 256
     minDepth: 0
     maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
-  ArmTarget: {fileID: 0}
-  ArmTargetLenght: 1
-  ArmTargeFrequency:
+    minNormalAngle: -45
+    maxNormalAngle: 45
+  armTarget: {fileID: 9155272551283559359}
+  armTargetLenght: 5
+  armTargeFrequency:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 1
+      inSlope: -0.0056603774
+      outSlope: -0.0056603774
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.41666666
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 1
-      outSlope: 0
+      inSlope: 2.201258
+      outSlope: 2.201258
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.07499999
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
