@@ -26,6 +26,20 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
+    [SerializeField, HideInInspector] Animator _animator = null;
+    public Animator Animator
+    {
+        get
+        {
+            if (_animator == null)
+            {
+                _animator = GetComponent<Animator>();
+            }
+
+            return _animator;
+        }
+    }
+
     bool canJump = false;
     bool IsFacingRight = true;
     Flipable[] flipableComponents = null;
@@ -42,6 +56,7 @@ public class CharacterMovement : MonoBehaviour
             if (!canJump && groundedCheckRigidbodies[i].IsTouching(groundedContactFilter) && groundedCheckRigidbodies[i].velocity.y <= 0)
             {
                 canJump = true;
+                Animator.SetBool("IsGrounded", true);
             }
         }
     }
@@ -56,12 +71,15 @@ public class CharacterMovement : MonoBehaviour
             }
 
             IsFacingRight = !IsFacingRight;
+            Animator.SetBool("IsFacingRight", IsFacingRight);
         }
         
         if (Mathf.Abs(RigidBody.velocity.x) < maxSpeed)
         {
             RigidBody.AddForce(new Vector2(value * moveForce * RigidBody.mass, 0.0f));
         }
+
+        Animator.SetFloat("Move", value);
     }
 
     public void Jump()
@@ -70,6 +88,7 @@ public class CharacterMovement : MonoBehaviour
         {   
             RigidBody.AddForce(new Vector2(0.0f, jumpForce * RigidBody.mass));
             canJump = false;
+            Animator.SetBool("IsGrounded", false);
         }
     }
 }
