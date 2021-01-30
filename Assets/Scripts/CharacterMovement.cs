@@ -9,8 +9,11 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] float maxSpeed = 10f;
     [SerializeField] float jumpForce = 100f;
     [SerializeField, Range(0.0f, 0.99f)] float flipDeadZone = 0.05f;
-    [SerializeField] Rigidbody2D[] groundedCheckRigidbodies;
-    [SerializeField] ContactFilter2D groundedContactFilter;
+    [SerializeField] Rigidbody2D[] groundedCheckRigidbodies = null;
+    [SerializeField] ContactFilter2D groundedContactFilter = new ContactFilter2D();
+    [SerializeField] Rigidbody2D ArmTarget = null; 
+    [SerializeField] float ArmTargetLenght = 1;
+    [SerializeField] AnimationCurve ArmTargeFrequency = AnimationCurve.Linear(0,0, 1,1);
 
     [SerializeField, HideInInspector] Rigidbody2D _rigidBody = null;
     public Rigidbody2D RigidBody
@@ -43,10 +46,12 @@ public class CharacterMovement : MonoBehaviour
     bool canJump = false;
     bool IsFacingRight = true;
     Flipable[] flipableComponents = null;
+    SpringJoint2D[] armTargetSpringJoints = null;
 
     void Awake()
     {
         flipableComponents = GetComponentsInChildren<Flipable>();
+        armTargetSpringJoints = ArmTarget.GetComponents<SpringJoint2D>();
     }
 
     void Update()
@@ -79,6 +84,21 @@ public class CharacterMovement : MonoBehaviour
         }
 
         Animator.SetFloat("MoveSpeed", Mathf.Abs(value));
+    }
+
+    public void SetArmTarget(Vector2 value)
+    {
+        if (value.sqrMagnitude > 1)
+        {
+            value = value.normalized;
+        }
+
+        ArmTarget.transform.localPosition = value * ArmTargetLenght;
+
+        for(int i = 0; i < armTargetSpringJoints.Length; i++)
+        {
+            armTargetSpringJoints[i].frequency = 0.0001f + ArmTargeFrequency.Evaluate(value.magnitude);
+        }
     }
 
     public void Jump()
