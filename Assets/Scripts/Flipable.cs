@@ -10,6 +10,7 @@ public class Flipable : MonoBehaviour
 
     [SerializeField] bool FlipTransformX = false;
     [SerializeField] bool FlipTransformY = false;
+    [SerializeField] bool FlipHingeJointAngleLimits = false;
 
     [SerializeField, HideInInspector] SpriteRenderer _spriteRenderer = null;
     public SpriteRenderer SpriteRenderer
@@ -25,9 +26,25 @@ public class Flipable : MonoBehaviour
         }
     }
 
+    [SerializeField, HideInInspector] HingeJoint2D _hingeJoint = null;
+    public HingeJoint2D HingeJoint
+    {
+        get
+        {
+            if (_hingeJoint == null)
+            {
+                _hingeJoint = GetComponent<HingeJoint2D>();
+            }
+
+            return _hingeJoint;
+        }
+    }
+
     Vector3 OriginalLocalScale;
     bool OriginalFlipX;
     bool OriginalFlipY;
+    float OriginalHingeJointLowerAngleLimit;
+    float OriginalHingeJointUpperAngleLimit;
 
     void Awake()
     {
@@ -42,6 +59,16 @@ public class Flipable : MonoBehaviour
         {
             Debug.LogError("Can not flip missing SpriteRenderer", gameObject);
         }
+
+        if (HingeJoint)
+        {
+            OriginalHingeJointLowerAngleLimit = HingeJoint.limits.min;
+            OriginalHingeJointUpperAngleLimit = HingeJoint.limits.max;
+        }
+        else if (FlipHingeJointAngleLimits)
+        {
+            Debug.LogError("Can not flip missing HingeJoint", gameObject);
+        }
     }
 
     public void SetFlip(bool value)
@@ -52,18 +79,26 @@ public class Flipable : MonoBehaviour
             SpriteRenderer.flipY = FlipSpriteY ? value ^ OriginalFlipY : OriginalFlipY;
         }
 
-        Vector3 tmp = OriginalLocalScale;
+        if (HingeJoint && FlipHingeJointAngleLimits)
+        {
+            JointAngleLimits2D tempLimits = HingeJoint.limits;
+            tempLimits.min = value ? OriginalHingeJointLowerAngleLimit-180 : OriginalHingeJointLowerAngleLimit;
+            tempLimits.max = value ? OriginalHingeJointUpperAngleLimit-180 : OriginalHingeJointUpperAngleLimit;
+            HingeJoint.limits = tempLimits;
+        }
+
+        Vector3 tempScale = OriginalLocalScale;
 
         if (FlipTransformX)
         {
-            tmp.x = value ? -OriginalLocalScale.x : OriginalLocalScale.x;
+            tempScale.x = value ? -OriginalLocalScale.x : OriginalLocalScale.x;
         }
 
         if (FlipTransformY)
         {
-            tmp.y = value ? -OriginalLocalScale.y : OriginalLocalScale.y;
+            tempScale.y = value ? -OriginalLocalScale.y : OriginalLocalScale.y;
         }
 
-        transform.localScale = tmp;
+        transform.localScale = tempScale;
     }
 }
