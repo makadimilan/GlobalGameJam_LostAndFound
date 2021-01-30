@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!50 &32193271 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 9155272551283559359, guid: 52a4c6663159fe441a29d021f1eb739b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8028485963898210774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &220744205
 GameObject:
   m_ObjectHideFlags: 0
@@ -5501,9 +5507,9 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: -69.30032, y: 149.08484, z: 0}
-      leftTangent: {x: -4.7815857, y: 4.9394073, z: 0}
-      rightTangent: {x: 5.4818993, y: -5.6632843, z: 0}
+    - position: {x: -39.714306, y: 270.2436, z: 0}
+      leftTangent: {x: -4.7815857, y: 4.9394836, z: 0}
+      rightTangent: {x: 5.481903, y: -5.6634216, z: 0}
       mode: 1
       height: 1
       bevelCutoff: 0
@@ -5561,9 +5567,9 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 79.88588, y: 150.80898, z: 0}
-      leftTangent: {x: -3.0727692, y: -0.048538208, z: 0}
-      rightTangent: {x: 6.9091187, y: 0.10882568, z: 0}
+    - position: {x: 68.83473, y: 265.9398, z: 0}
+      leftTangent: {x: -3.0728302, y: -0.04852295, z: 0}
+      rightTangent: {x: 6.9091797, y: 0.10882568, z: 0}
       mode: 1
       height: 1
       bevelCutoff: 0
@@ -5664,8 +5670,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: 14.56221, y: 36.874603, z: -0.00005}
-    m_Extent: {x: 244.463, y: 142.94833, z: 0.00005}
+    m_Center: {x: 14.592041, y: 82.46515, z: -0.00005}
+    m_Extent: {x: 244.49283, y: 188.53888, z: 0.00005}
 --- !u!4 &677774200
 Transform:
   m_ObjectHideFlags: 0
@@ -11038,51 +11044,6 @@ MonoBehaviour:
   MaxZoomInAmount: 1
   MaxZoomOutAmount: 1.2
   CurrentVelocity: 0
---- !u!1 &1293862128 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8028485964219639622, guid: 52a4c6663159fe441a29d021f1eb739b,
-    type: 3}
-  m_PrefabInstance: {fileID: 8028485963898210774}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1293862135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1293862128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88254a7c3d982284d956d3b72dd2b0db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  setting:
-    maxTorque: 300
-    animCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  UseLocalSpace: 1
 --- !u!1 &1737217296
 GameObject:
   m_ObjectHideFlags: 0
@@ -11810,60 +11771,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8028485963965705435, guid: 52a4c6663159fe441a29d021f1eb739b,
-        type: 3}
-      propertyPath: m_PointLightInnerRadius
-      value: 4.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8028485963965705435, guid: 52a4c6663159fe441a29d021f1eb739b,
-        type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 29.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8028485964219639618, guid: 52a4c6663159fe441a29d021f1eb739b,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8028485964219639623, guid: 52a4c6663159fe441a29d021f1eb739b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8028485964219639623, guid: 52a4c6663159fe441a29d021f1eb739b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8028485964219639623, guid: 52a4c6663159fe441a29d021f1eb739b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8028485964219639623, guid: 52a4c6663159fe441a29d021f1eb739b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8028485964219639623, guid: 52a4c6663159fe441a29d021f1eb739b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8028485964439655069, guid: 52a4c6663159fe441a29d021f1eb739b,
-        type: 3}
-      propertyPath: m_DampingRatio
-      value: 0.9
-      objectReference: {fileID: 0}
     - target: {fileID: 8028485965847445618, guid: 52a4c6663159fe441a29d021f1eb739b,
         type: 3}
       propertyPath: m_Name
       value: Character
-      objectReference: {fileID: 0}
-    - target: {fileID: 8028485965847445619, guid: 52a4c6663159fe441a29d021f1eb739b,
-        type: 3}
-      propertyPath: m_Interpolate
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8028485965847445630, guid: 52a4c6663159fe441a29d021f1eb739b,
         type: 3}
@@ -11922,13 +11833,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8028485965847445631, guid: 52a4c6663159fe441a29d021f1eb739b,
         type: 3}
-      propertyPath: maxSpeed
-      value: 8
-      objectReference: {fileID: 0}
+      propertyPath: ArmTarget
+      value: 
+      objectReference: {fileID: 32193271}
     - target: {fileID: 8028485965847445631, guid: 52a4c6663159fe441a29d021f1eb739b,
         type: 3}
-      propertyPath: jumpForce
-      value: 700
+      propertyPath: ArmTargetLenght
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52a4c6663159fe441a29d021f1eb739b, type: 3}
