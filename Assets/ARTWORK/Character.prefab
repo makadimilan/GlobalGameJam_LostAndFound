@@ -409,8 +409,10 @@ GameObject:
   - component: {fileID: 3999968819221797604}
   - component: {fileID: 2617860025835075457}
   - component: {fileID: 9155272551283559359}
+  - component: {fileID: 32193273}
+  - component: {fileID: 32193270}
   m_Layer: 6
-  m_Name: ArmMuscle
+  m_Name: MauseTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -503,6 +505,46 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!231 &32193273
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4689512829509563724}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 8028485964290707688}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0.729109, y: 0.08770327}
+  m_AutoConfigureDistance: 0
+  m_Distance: 0.005
+  m_DampingRatio: 0
+  m_Frequency: 0.0001
+--- !u!231 &32193270
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4689512829509563724}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 8028485963895978851}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0.729109, y: 0.08770327}
+  m_AutoConfigureDistance: 0
+  m_Distance: 0.005
+  m_DampingRatio: 0
+  m_Frequency: 0.0001
 --- !u!1 &7394421651738371318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,8 +1050,8 @@ GameObject:
   - component: {fileID: 8028485963875215673}
   - component: {fileID: 8028485963875215652}
   - component: {fileID: 8028485963875215655}
-  - component: {fileID: 8028485963875215654}
   - component: {fileID: 1679377124}
+  - component: {fileID: 7565261757787053433}
   m_Layer: 7
   m_Name: Pelvis
   m_TagString: Untagged
@@ -1130,38 +1172,6 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 114.1
     m_UpperAngle: 204.8
---- !u!60 &8028485963875215654
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8028485963875215675}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.050524604, y: 0.5583409}
-    oldSize: {x: 1.22, y: 1.4}
-    newSize: {x: 1.22, y: 1.31}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.7755499, y: 0.29709274}
-      - {x: 0.17106324, y: 0.5673562}
-      - {x: -0.11476648, y: 0.2760815}
-      - {x: -0.265994, y: -0.2477952}
-      - {x: -0.10242134, y: -0.8295295}
-      - {x: 0.64306635, y: -0.6943117}
-      - {x: 0.9059718, y: -0.28653806}
 --- !u!114 &1679377124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,6 +1192,22 @@ MonoBehaviour:
   FlipHingeJointAngleLimits: 0
   _spriteRenderer: {fileID: 0}
   _hingeJoint: {fileID: 0}
+--- !u!58 &7565261757787053433
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8028485963875215675}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.54836017, y: -0.081677265}
+  serializedVersion: 2
+  m_Radius: 0.70000005
 --- !u!1 &8028485963895978855
 GameObject:
   m_ObjectHideFlags: 0
