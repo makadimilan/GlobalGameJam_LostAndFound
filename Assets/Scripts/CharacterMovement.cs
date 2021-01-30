@@ -71,7 +71,6 @@ public class CharacterMovement : MonoBehaviour
             }
 
             IsFacingRight = !IsFacingRight;
-            Animator.SetBool("IsFacingRight", IsFacingRight);
         }
         
         if (Mathf.Abs(RigidBody.velocity.x) < maxSpeed)
@@ -79,7 +78,7 @@ public class CharacterMovement : MonoBehaviour
             RigidBody.AddForce(new Vector2(value * moveForce * RigidBody.mass, 0.0f));
         }
 
-        Animator.SetFloat("Move", value);
+        Animator.SetFloat("Speed", Mathf.Abs(value));
     }
 
     public void Jump()

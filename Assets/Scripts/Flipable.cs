@@ -58,7 +58,7 @@ public class Flipable : MonoBehaviour
             OriginalFlipY = SpriteRenderer.flipY;
             OriginalSortingOrder = SpriteRenderer.sortingOrder;
         }
-        else if (FlipSpriteX || FlipSpriteY)
+        else if (FlipSpriteX || FlipSpriteY || FlipSortingOrder)
         {
             Debug.LogError("Can not flip missing SpriteRenderer", gameObject);
         }
@@ -80,7 +80,11 @@ public class Flipable : MonoBehaviour
         {
             SpriteRenderer.flipX = FlipSpriteX ? value ^ OriginalFlipX : OriginalFlipX;
             SpriteRenderer.flipY = FlipSpriteY ? value ^ OriginalFlipY : OriginalFlipY;
-            SpriteRenderer.sortingOrder = value ? -OriginalSortingOrder : OriginalSortingOrder;
+
+            if (FlipSortingOrder)
+            {
+                SpriteRenderer.sortingOrder = value ? -OriginalSortingOrder : OriginalSortingOrder;
+            }
         }
 
         if (HingeJoint && FlipHingeJointAngleLimits)
