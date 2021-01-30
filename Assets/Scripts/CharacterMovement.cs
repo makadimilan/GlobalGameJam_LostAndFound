@@ -25,23 +25,35 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    bool _canJump = false;
+    bool canJump = false;
+    bool IsFacingRight = true;
+    Flipable[] flipableComponents = null;
 
-    void Start()
+    void Awake()
     {
-        
+        flipableComponents = GetComponentsInChildren<Flipable>();
     }
 
     void Update()
     {
-        if (!_canJump && RigidBody.IsTouching(groundedContactFilter))
+        if (!canJump && RigidBody.IsTouching(groundedContactFilter))
         {
-            _canJump = true;
+            canJump = true;
         }
     }
 
     public void Move(float value)
     {
+        if ((IsFacingRight && value < 0) || (!IsFacingRight && value > 0))
+        {
+            foreach(Flipable element in flipableComponents)
+            {
+                element.SetFlip(IsFacingRight);
+            }
+
+            IsFacingRight = !IsFacingRight;
+        }
+        
         if (Mathf.Abs(RigidBody.velocity.x) < maxSpeed)
         {
             RigidBody.AddForce(new Vector2(value * moveForce * RigidBody.mass, 0.0f));
@@ -50,10 +62,10 @@ public class CharacterMovement : MonoBehaviour
 
     public void Jump()
     {
-        if (_canJump)
+        if (canJump)
         {   
             RigidBody.AddForce(new Vector2(0.0f, jumpForce * RigidBody.mass));
-            _canJump = false;
+            canJump = false;
         }
     }
 }

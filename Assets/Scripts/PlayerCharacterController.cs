@@ -22,8 +22,23 @@ public class PlayerCharacterController : MonoBehaviour
             return _characterMovement;
         }
     }
+
+    [SerializeField, HideInInspector] Flipable[] _FlipableComponents = null;
+    public Flipable[] FlipableComponents
+    {
+        get
+        {
+            if (_FlipableComponents == null)
+            {
+                _FlipableComponents = GetComponentsInChildren<Flipable>();
+            }
+
+            return _FlipableComponents;
+        }
+    }
     
     Rewired.Player rewiredPlayer = null;
+
     void Start()
     {
         rewiredPlayer = Rewired.ReInput.players.GetPlayer(rewiredPlayerId);
