@@ -175,10 +175,10 @@ TextureImporter:
       name: Bones_0
       rect:
         serializedVersion: 2
-        x: 193
-        y: 884
-        width: 180
-        height: 49
+        x: 186
+        y: 877
+        width: 195
+        height: 64
       alignment: 9
       pivot: {x: 0.03273536, y: 0.50000125}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,10 +196,10 @@ TextureImporter:
       name: Bones_1
       rect:
         serializedVersion: 2
-        x: 430
-        y: 891
-        width: 201
-        height: 42
+        x: 425
+        y: 883
+        width: 212
+        height: 54
       alignment: 9
       pivot: {x: 0.039499313, y: 0.44968668}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,10 +217,10 @@ TextureImporter:
       name: Bones_2
       rect:
         serializedVersion: 2
-        x: 686
-        y: 883
-        width: 148
-        height: 58
+        x: 683
+        y: 882
+        width: 109
+        height: 65
       alignment: 9
       pivot: {x: 0.034512494, y: 0.48542732}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,10 +238,10 @@ TextureImporter:
       name: Bones_3
       rect:
         serializedVersion: 2
-        x: 193
-        y: 759
-        width: 186
-        height: 52
+        x: 187
+        y: 756
+        width: 197
+        height: 60
       alignment: 9
       pivot: {x: 0.043263834, y: 0.52438474}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,10 +259,10 @@ TextureImporter:
       name: Bones_4
       rect:
         serializedVersion: 2
-        x: 431
-        y: 766
-        width: 199
-        height: 44
+        x: 428
+        y: 761
+        width: 208
+        height: 53
       alignment: 9
       pivot: {x: 0.039118934, y: 0.47118446}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,10 +280,10 @@ TextureImporter:
       name: Bones_5
       rect:
         serializedVersion: 2
-        x: 698
-        y: 733
-        width: 141
-        height: 80
+        x: 689
+        y: 728
+        width: 120
+        height: 72
       alignment: 9
       pivot: {x: 0.03238629, y: 0.47358474}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,10 +301,10 @@ TextureImporter:
       name: Bones_6
       rect:
         serializedVersion: 2
-        x: 191
+        x: 190
         y: 459
-        width: 163
-        height: 168
+        width: 173
+        height: 171
       alignment: 9
       pivot: {x: 0.36946067, y: 0.14281246}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,10 +322,10 @@ TextureImporter:
       name: Bones_10
       rect:
         serializedVersion: 2
-        x: 410
-        y: 493
-        width: 188
-        height: 146
+        x: 389
+        y: 473
+        width: 209
+        height: 166
       alignment: 9
       pivot: {x: 0.5077083, y: 0.57857317}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,12 +343,12 @@ TextureImporter:
       name: Bones_11
       rect:
         serializedVersion: 2
-        x: 683
+        x: 698
         y: 493
-        width: 122
+        width: 111
         height: 131
       alignment: 9
-      pivot: {x: 0.17444599, y: 0.58348584}
+      pivot: {x: 0.116103716, y: 0.5615155}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -364,10 +364,10 @@ TextureImporter:
       name: Bones_14
       rect:
         serializedVersion: 2
-        x: 151
-        y: 273
-        width: 266
-        height: 55
+        x: 147
+        y: 264
+        width: 274
+        height: 67
       alignment: 9
       pivot: {x: 0.042392474, y: 0.53842384}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -385,10 +385,10 @@ TextureImporter:
       name: Bones_15
       rect:
         serializedVersion: 2
-        x: 464
-        y: 266
-        width: 263
-        height: 43
+        x: 459
+        y: 256
+        width: 268
+        height: 61
       alignment: 9
       pivot: {x: 0.017888058, y: 0.46068412}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -406,12 +406,12 @@ TextureImporter:
       name: Bones_16
       rect:
         serializedVersion: 2
-        x: 791
-        y: 258
-        width: 55
-        height: 127
+        x: 788
+        y: 255
+        width: 59
+        height: 138
       alignment: 9
-      pivot: {x: 0.046611995, y: 0.20048319}
+      pivot: {x: 0.0075869802, y: 0.21299656}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -427,10 +427,10 @@ TextureImporter:
       name: Bones_17
       rect:
         serializedVersion: 2
-        x: 149
-        y: 77
-        width: 262
-        height: 48
+        x: 145
+        y: 69
+        width: 272
+        height: 65
       alignment: 9
       pivot: {x: 0.027340198, y: 0.45597377}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -448,10 +448,10 @@ TextureImporter:
       name: Bones_18
       rect:
         serializedVersion: 2
-        x: 465
-        y: 79
-        width: 259
-        height: 45
+        x: 462
+        y: 72
+        width: 272
+        height: 55
       alignment: 9
       pivot: {x: 0.034920357, y: 0.46243185}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,12 +469,12 @@ TextureImporter:
       name: Bones_19
       rect:
         serializedVersion: 2
-        x: 795
-        y: 72
-        width: 44
-        height: 135
+        x: 784
+        y: 64
+        width: 56
+        height: 150
       alignment: 9
-      pivot: {x: 0.10616788, y: 0.14935602}
+      pivot: {x: 0.07533046, y: 0.2491296}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
