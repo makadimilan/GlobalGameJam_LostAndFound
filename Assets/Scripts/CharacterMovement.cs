@@ -44,7 +44,7 @@ public class CharacterMovement : MonoBehaviour
     {
         if (Mathf.Abs(RigidBody.velocity.x) < maxSpeed)
         {
-            RigidBody.AddForce(new Vector2(value * moveForce, 0.0f));
+            RigidBody.AddForce(new Vector2(value * moveForce * RigidBody.mass, 0.0f));
         }
     }
 
@@ -52,7 +52,7 @@ public class CharacterMovement : MonoBehaviour
     {
         if (_canJump)
         {   
-            RigidBody.AddForce(new Vector2(0.0f, jumpForce));
+            RigidBody.AddForce(new Vector2(0.0f, jumpForce * RigidBody.mass));
             _canJump = false;
         }
     }

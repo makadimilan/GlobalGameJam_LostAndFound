@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterMovement))]
 public class PlayerCharacterController : MonoBehaviour
 {
-    [SerializeField] int rewiredPlayerId = 1;
+    [SerializeField] int rewiredPlayerId = 0;
     [SerializeField] string moveAxisName = "Move";
     [SerializeField] string jumpButtonName = "Jump";
 
