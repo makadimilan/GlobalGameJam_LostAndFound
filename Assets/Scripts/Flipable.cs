@@ -32,14 +32,25 @@ public class Flipable : MonoBehaviour
     void Awake()
     {
         OriginalLocalScale = transform.localScale;
-        OriginalFlipX = SpriteRenderer.flipX;
-        OriginalFlipY = SpriteRenderer.flipY;
+
+        if (SpriteRenderer)
+        {
+            OriginalFlipX = SpriteRenderer.flipX;
+            OriginalFlipY = SpriteRenderer.flipY;
+        }
+        else if (FlipSpriteX || FlipSpriteY)
+        {
+            Debug.LogError("Can not flip missing SpriteRenderer", gameObject);
+        }
     }
 
     public void SetFlip(bool value)
     {
-        SpriteRenderer.flipX = FlipSpriteX ? value ^ OriginalFlipX : OriginalFlipX;
-        SpriteRenderer.flipY = FlipSpriteY ? value ^ OriginalFlipY : OriginalFlipY;
+        if (SpriteRenderer)
+        {
+            SpriteRenderer.flipX = FlipSpriteX ? value ^ OriginalFlipX : OriginalFlipX;
+            SpriteRenderer.flipY = FlipSpriteY ? value ^ OriginalFlipY : OriginalFlipY;
+        }
 
         Vector3 tmp = OriginalLocalScale;
 
