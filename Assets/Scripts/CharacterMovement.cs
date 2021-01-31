@@ -231,4 +231,12 @@ public class CharacterMovement : MonoBehaviour
 
         return false;
     }
+
+    void OnDrawGizmosSelected() 
+    {
+        if (Mathf.Abs(RigidBody.velocity.x) >= maxSpeed || BodyJoint.distance >= maxDistance)
+        {
+            Gizmos.DrawWireSphere(transform.position, 1);
+        }
+    }
 }
