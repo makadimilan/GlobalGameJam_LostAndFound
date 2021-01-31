@@ -10,7 +10,7 @@ public class Lift : MonoBehaviour
 
     float progress = 0;
     bool isRaising = false;
-    Vector3 originalPosition;
+    Vector2 originalPosition;
 
     void Awake() 
     {
@@ -39,7 +39,9 @@ public class Lift : MonoBehaviour
         }
 
         progress = Mathf.Clamp(progress, 0, length);
-        transform.position = originalPosition + Vector3.up * progress;
+        //transform.position = originalPosition + Vector3.up * progress;
+
+        gameObject.GetComponent<Rigidbody2D>().MovePosition(originalPosition + Vector2.up * progress);
     }
 
     void OnDrawGizmosSelected() 
