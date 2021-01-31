@@ -15,6 +15,8 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] Rigidbody2D armTarget = null; 
     [SerializeField] float armTargetLenght = 1;
     [SerializeField] AnimationCurve armTargeFrequency = AnimationCurve.Linear(0,0, 1,1);
+    [SerializeField] SpringJoint2D BodyJoint = null;
+    [SerializeField] float maxDistance = 1f;
 
     enum JumpState 
     {
@@ -135,7 +137,7 @@ public class CharacterMovement : MonoBehaviour
             isFacingRight = !isFacingRight;
         }
         
-        if (Mathf.Abs(RigidBody.velocity.x) < maxSpeed)
+        if (Mathf.Abs(RigidBody.velocity.x) < maxSpeed && BodyJoint.distance < maxDistance)
         {
             RigidBody.AddForce(new Vector2(value * moveForce * RigidBody.mass, 0.0f));
         }
