@@ -11,6 +11,7 @@ public class PlayerCharacterController : MonoBehaviour
     [SerializeField] string verticalAimAxisName = "AimY";
     [SerializeField] string jumpButtonName = "Jump";
     [SerializeField] string grabButtonName = "Grab";
+    [SerializeField] string mouseAimButtonName = "MouseAim";
 
     [SerializeField, HideInInspector] CharacterMovement _characterMovement = null;
     public CharacterMovement CharacterMovement
@@ -36,12 +37,22 @@ public class PlayerCharacterController : MonoBehaviour
     void Update()
     {
         CharacterMovement.Move(rewiredPlayer.GetAxis(moveAxisName));
-        CharacterMovement.SetArmTarget(new Vector2(rewiredPlayer.GetAxis(horizontalAimAxisName), rewiredPlayer.GetAxis(verticalAimAxisName)));
         CharacterMovement.SetHandGrab(rewiredPlayer.GetButton(grabButtonName));
 
         if (rewiredPlayer.GetButtonDown(jumpButtonName))
         {
             CharacterMovement.Jump();
+        }
+
+        if (rewiredPlayer.GetButton(mouseAimButtonName))
+        {
+            Vector3 screenPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z - Camera.main.transform.position.z);
+            Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
+            CharacterMovement.SetArmTarget(worldPosition - (Vector2)transform.position);
+        }
+        else
+        {
+            CharacterMovement.SetArmTarget(new Vector2(rewiredPlayer.GetAxis(horizontalAimAxisName), rewiredPlayer.GetAxis(verticalAimAxisName)));
         }
     }
 }
