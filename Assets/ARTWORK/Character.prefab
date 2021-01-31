@@ -1343,11 +1343,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.4077832, y: -0.11191163}
-      - {x: 1.1024153, y: 0.27564135}
-      - {x: -0.034794897, y: 0.21958527}
-      - {x: 0.041995004, y: -0.19125345}
-      - {x: 0.8779404, y: -0.30219895}
+    - - {x: 0.7440639, y: 0.032209665}
+      - {x: 0.59550583, y: 0.3552529}
+      - {x: 0.22897819, y: 0.23513198}
+      - {x: 0.24085633, y: -0.26994583}
+      - {x: 0.55163383, y: -0.33325016}
 --- !u!233 &8028485963895978848
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -1406,22 +1406,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handContactFilter:
     useTriggers: 0
-    useLayerMask: 0
+    useLayerMask: 1
     useDepth: 0
     useOutsideDepth: 0
     useNormalAngle: 0
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 0
+      m_Bits: 512
     minDepth: 0
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
   handSprites:
   - {fileID: 2394847500092774128, guid: 38cc99bd6458585478b679fb9d26ba2a, type: 3}
-  - {fileID: 21300000, guid: 64b64113615d0ac4384f655a84cdf64d, type: 3}
-  - {fileID: -4361333571633691466, guid: 38cc99bd6458585478b679fb9d26ba2a, type: 3}
+  - {fileID: -7743499356955606234, guid: 38cc99bd6458585478b679fb9d26ba2a, type: 3}
+  - {fileID: -472473101296550905, guid: 38cc99bd6458585478b679fb9d26ba2a, type: 3}
   grabJoint: {fileID: 8028485963898210777}
   _rigidBody: {fileID: 0}
   _spriteRenderer: {fileID: 0}
@@ -2046,11 +2046,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.293994, y: -0.008739091}
-      - {x: 1.1857517, y: 0.39938158}
-      - {x: -0.020851992, y: 0.14824305}
-      - {x: -0.007043723, y: -0.21194035}
-      - {x: 1.0198509, y: -0.38024312}
+    - - {x: 0.6952837, y: -0.02544228}
+      - {x: 0.50972855, y: 0.35489184}
+      - {x: 0.17838916, y: 0.2554202}
+      - {x: 0.24812141, y: -0.2269114}
+      - {x: 0.62362397, y: -0.29149702}
 --- !u!233 &8028485964290707690
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -2109,21 +2109,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handContactFilter:
     useTriggers: 0
-    useLayerMask: 0
+    useLayerMask: 1
     useDepth: 0
     useOutsideDepth: 0
     useNormalAngle: 0
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 0
+      m_Bits: 512
     minDepth: 0
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
   handSprites:
   - {fileID: 2394847500092774128, guid: 38cc99bd6458585478b679fb9d26ba2a, type: 3}
-  - {fileID: 21300000, guid: 64b64113615d0ac4384f655a84cdf64d, type: 3}
+  - {fileID: 3709547384785974797, guid: 38cc99bd6458585478b679fb9d26ba2a, type: 3}
   - {fileID: -4361333571633691466, guid: 38cc99bd6458585478b679fb9d26ba2a, type: 3}
   grabJoint: {fileID: 8028485963898210779}
   _rigidBody: {fileID: 0}
@@ -3717,15 +3717,15 @@ MonoBehaviour:
   - {fileID: 8028485963860298572}
   - {fileID: 8028485965051403880}
   groundedContactFilter:
-    useTriggers: 0
+    useTriggers: 1
     useLayerMask: 0
     useDepth: 0
     useOutsideDepth: 0
-    useNormalAngle: 0
+    useNormalAngle: 1
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 256
+      m_Bits: 768
     minDepth: 0
     maxDepth: 0
     minNormalAngle: -45
