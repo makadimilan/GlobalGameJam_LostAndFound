@@ -62,6 +62,12 @@ public class CharacterHand : MonoBehaviour
             grabJoint.connectedBody = contacts[0].rigidbody;
             grabJoint.connectedAnchor = contacts[0].rigidbody.GetPoint(contacts[0].point);
             grabJoint.enabled = true;
+
+            Grabable grabable = grabJoint.connectedBody.GetComponent<Grabable>();
+            if (grabable != null)
+            {
+                grabable.StartGrab(this);
+            }
         }
     }
 
@@ -82,6 +88,12 @@ public class CharacterHand : MonoBehaviour
 
     public void ReleaseGrabbedObject()
     {
+        Grabable grabable = grabJoint.connectedBody?.GetComponent<Grabable>();
+        if (grabable != null)
+        {
+            grabable.StopGrab(this);
+        }
+
         grabJoint.connectedBody = null;
         grabJoint.enabled = false;
     }
