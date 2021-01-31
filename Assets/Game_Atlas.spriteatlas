@@ -33,6 +33,30 @@ SpriteAtlas:
       m_Overridden: 0
       m_AndroidETC2FallbackOverride: 0
       m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 47
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: WebGL
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 29
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
       serializedVersion: 2
       padding: 4
@@ -43,10 +67,10 @@ SpriteAtlas:
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: 2800000, guid: 395dd1a3b5ab92445828b2a6509b1a2b, type: 3}
-    - {fileID: 2800000, guid: 38cc99bd6458585478b679fb9d26ba2a, type: 3}
     - {fileID: 2800000, guid: d85ee4b28c8608044bde4d6e113ef417, type: 3}
-    totalSpriteSurfaceArea: 3301688
+    - {fileID: 2800000, guid: 38cc99bd6458585478b679fb9d26ba2a, type: 3}
+    - {fileID: 2800000, guid: 395dd1a3b5ab92445828b2a6509b1a2b, type: 3}
+    totalSpriteSurfaceArea: 3680952
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -54,7 +78,6 @@ SpriteAtlas:
   m_PackedSprites:
   - {fileID: 752128233301257830, guid: d85ee4b28c8608044bde4d6e113ef417, type: 3}
   - {fileID: -4556728275294165534, guid: d85ee4b28c8608044bde4d6e113ef417, type: 3}
-  - {fileID: 7976759891992972561, guid: d85ee4b28c8608044bde4d6e113ef417, type: 3}
   - {fileID: 3382379523233621174, guid: d85ee4b28c8608044bde4d6e113ef417, type: 3}
   - {fileID: 7274895369921224050, guid: d85ee4b28c8608044bde4d6e113ef417, type: 3}
   - {fileID: -7845684259841925077, guid: d85ee4b28c8608044bde4d6e113ef417, type: 3}
@@ -102,7 +125,6 @@ SpriteAtlas:
   m_PackedSpriteNamesToIndex:
   - Objects_A_0
   - Objects_A_1
-  - Objects_A_2
   - Objects_A_3
   - Objects_A_4
   - Objects_A_5
