@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lift : Grabable
+public class Lift : MonoBehaviour
 {
     [SerializeField] float length = 100;
     [SerializeField] float RaiseSpeed = 10;
     [SerializeField] float Inertia = 1f/30f;
 
     float progress = 0;
-    bool isGrabbed = false;
+    bool isRaising = false;
     Vector3 originalPosition;
 
     void Awake() 
@@ -17,23 +17,23 @@ public class Lift : Grabable
         originalPosition = transform.position;
     }
 
-    protected override void OnGrabStarted() 
+    public void Raise() 
     {
-        isGrabbed = true;
+        isRaising = true;
     }
 
-    protected override void OnGrabEnded() 
+    public void Fall() 
     {
-        isGrabbed = false;
+        isRaising = false;
     }
 
     void FixedUpdate() 
     {
-        if (isGrabbed && progress < length)
+        if (isRaising && progress < length)
         {
             progress += RaiseSpeed * Time.fixedDeltaTime;
         }
-        else if (!isGrabbed && progress > 0)
+        else if (!isRaising && progress > 0)
         {
             progress = (0 - progress) * Mathf.Clamp01(Time.fixedDeltaTime / Inertia);
         }
