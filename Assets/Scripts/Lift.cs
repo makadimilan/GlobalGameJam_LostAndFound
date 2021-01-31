@@ -57,7 +57,7 @@ public class Lift : MonoBehaviour
         RigidBody.MovePosition(originalPosition + Vector2.up * progress);
     }
 
-    void OnDrawGizmosSelected() 
+    void OnDrawGizmos() 
     {
         Gizmos.DrawLine(transform.position, transform.position + Vector3.up * length);
     }
