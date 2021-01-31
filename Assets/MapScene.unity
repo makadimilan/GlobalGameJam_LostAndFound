@@ -2179,7 +2179,7 @@ SpriteRenderer:
   m_Size: {x: 40.96, y: 40.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &495384172 stripped
@@ -2248,7 +2248,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 599091552}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ce30ad543c3a82549966f716a2cd3f41, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2729,7 +2729,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 611572794}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ce30ad543c3a82549966f716a2cd3f41, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -9291,7 +9291,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 853466798}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ce30ad543c3a82549966f716a2cd3f41, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -16205,7 +16205,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1792541049}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ce30ad543c3a82549966f716a2cd3f41, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -17091,10 +17091,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.87, y: 2.95}
+  m_Size: {x: 2.72, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!60 &2035697078
@@ -17113,9 +17113,9 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.49553904, y: 0.9679435}
-    oldSize: {x: 2.83, y: 4.02}
-    newSize: {x: 1.87, y: 2.95}
+    pivot: {x: 0.48611045, y: 0.95260286}
+    oldSize: {x: 2.72, y: 4}
+    newSize: {x: 2.72, y: 4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -17355,6 +17355,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028485965847445631, guid: 52a4c6663159fe441a29d021f1eb739b,
+        type: 3}
+      propertyPath: moveForce
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52a4c6663159fe441a29d021f1eb739b, type: 3}
