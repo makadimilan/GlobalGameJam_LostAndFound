@@ -6,6 +6,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     [SerializeField] float moveForce = 1f;
+    [SerializeField, Range(0.0f, 1.0f)] float inAirMoveForceMultiplier = 1f;
     [SerializeField] float maxSpeed = 10f;
     [SerializeField] float jumpForce = 100f;
     [SerializeField] float coyoteTime = 0.2f;
@@ -95,34 +96,6 @@ public class CharacterMovement : MonoBehaviour
         }
 
         previousVelocity = RigidBody.velocity;
-
-        /*if (jumpState == JumpState.Falling)
-        {
-            for(int i = 0; i < groundedCheckRigidbodies.Length; i++)
-            {
-                ContactPoint2D[] contacts = new ContactPoint2D[1];
-                if (groundedCheckRigidbodies[i].GetContacts(groundedContactFilter, contacts) > 0)
-                {
-                    bool isValidGround = true;
-                    for(int j = 0; j < handComponents.Length; j++)
-                    {
-                        Rigidbody2D otherRB = contacts[0].otherRigidbody;
-                        if (otherRB != null && otherRB == handComponents[j].GetGrabbedObject())
-                        {
-                            isValidGround = false;
-                            break;
-                        }
-                    }
-
-                    if (isValidGround)
-                    {
-                        jumpState = JumpState.Grounded;
-                        Animator.SetBool("IsGrounded", true);
-                        break;
-                    }
-                }
-            }
-        }*/
     }
 
     public void Move(float value)
@@ -139,7 +112,8 @@ public class CharacterMovement : MonoBehaviour
         
         if (Mathf.Abs(RigidBody.velocity.x) < maxSpeed && Mathf.Abs(BodyTransforom.position.x - transform.position.x) < maxDistance)
         {
-            RigidBody.AddForce(new Vector2(value * moveForce * RigidBody.mass, 0.0f));
+            float force = jumpState == JumpState.Grounded ? moveForce : moveForce * inAirMoveForceMultiplier;
+            RigidBody.AddForce(new Vector2(value * force * RigidBody.mass, 0.0f));
         }
 
         Animator.SetFloat("MoveSpeed", Mathf.Abs(value));
