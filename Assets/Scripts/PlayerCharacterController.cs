@@ -34,7 +34,7 @@ public class PlayerCharacterController : MonoBehaviour
         rewiredPlayer = Rewired.ReInput.players.GetPlayer(rewiredPlayerId);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         CharacterMovement.Move(rewiredPlayer.GetAxis(moveAxisName));
         CharacterMovement.SetHandGrab(rewiredPlayer.GetButton(grabButtonName));
