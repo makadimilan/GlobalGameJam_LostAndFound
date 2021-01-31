@@ -2,11 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Lift : MonoBehaviour
 {
     [SerializeField] float length = 100;
     [SerializeField] float RaiseSpeed = 10;
     [SerializeField] float Inertia = 1f/30f;
+
+    [SerializeField, HideInInspector] Rigidbody2D _rigidBody = null;
+    public Rigidbody2D RigidBody
+    {
+        get
+        {
+            if (_rigidBody == null)
+            {
+                _rigidBody = GetComponent<Rigidbody2D>();
+            }
+
+            return _rigidBody;
+        }
+    }
 
     float progress = 0;
     bool isRaising = false;
@@ -35,13 +50,11 @@ public class Lift : MonoBehaviour
         }
         else if (!isRaising && progress > 0)
         {
-            progress = (0 - progress) * Mathf.Clamp01(Time.fixedDeltaTime / Inertia);
+            progress += (0 - progress) * Mathf.Clamp01(Time.fixedDeltaTime / Inertia);
         }
 
         progress = Mathf.Clamp(progress, 0, length);
-        //transform.position = originalPosition + Vector3.up * progress;
-
-        gameObject.GetComponent<Rigidbody2D>().MovePosition(originalPosition + Vector2.up * progress);
+        RigidBody.MovePosition(originalPosition + Vector2.up * progress);
     }
 
     void OnDrawGizmosSelected() 
