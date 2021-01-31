@@ -170,8 +170,6 @@ public class CharacterMovement : MonoBehaviour
 
     void ChangeJumpState(JumpState newState)
     {
-        Debug.LogWarning(jumpState + " => " + newState);
-
         // OnExit
         switch(jumpState)
         {
