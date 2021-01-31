@@ -236,7 +236,8 @@ public class CharacterMovement : MonoBehaviour
     {
         if (Mathf.Abs(RigidBody.velocity.x) >= maxSpeed || BodyJoint.distance >= maxDistance)
         {
-            Gizmos.DrawWireSphere(transform.position, 1);
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(transform.position, 1);
         }
     }
 }

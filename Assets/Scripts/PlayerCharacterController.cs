@@ -58,7 +58,7 @@ public class PlayerCharacterController : MonoBehaviour
 
     void OnDrawGizmos() 
     {
-        if (rewiredPlayer.GetButton(mouseAimButtonName))
+        if (rewiredPlayer != null && rewiredPlayer.GetButton(mouseAimButtonName))
         {
             Vector3 screenPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z - Camera.main.transform.position.z);
             Gizmos.DrawSphere(Camera.main.ScreenToWorldPoint(screenPosition), 0.1f);
