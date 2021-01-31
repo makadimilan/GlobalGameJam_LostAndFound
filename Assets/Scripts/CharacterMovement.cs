@@ -236,7 +236,10 @@ public class CharacterMovement : MonoBehaviour
     {
         if (Mathf.Abs(RigidBody.velocity.x) >= maxSpeed || Mathf.Abs(BodyTransforom.position.x - transform.position.x) >= maxDistance)
         {
-            Gizmos.color = Color.red;
+            Gizmos.color = new Color(
+                Mathf.Abs(BodyTransforom.position.x - transform.position.x) >= maxDistance ? 1 : 0,
+                0,
+                Mathf.Abs(RigidBody.velocity.x) >= maxSpeed ? 1 : 0);
             Gizmos.DrawSphere(transform.position, 1);
         }
     }
