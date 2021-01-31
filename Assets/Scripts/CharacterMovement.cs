@@ -8,6 +8,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] float moveForce = 1f;
     [SerializeField] float maxSpeed = 10f;
     [SerializeField] float jumpForce = 100f;
+    [SerializeField] float coyoteTime = 0.2f;
     [SerializeField, Range(0.0f, 0.99f)] float flipDeadZone = 0.05f;
     [SerializeField] Rigidbody2D[] groundedCheckRigidbodies = null;
     [SerializeField] ContactFilter2D groundedContactFilter = new ContactFilter2D();
@@ -51,7 +52,9 @@ public class CharacterMovement : MonoBehaviour
     }
 
     JumpState jumpState = JumpState.Falling;
-    bool IsFacingRight = true;
+    float notGroundedTime = 0;
+    Vector2 previousVelocity;
+    bool isFacingRight = true;
     Flipable[] flipableComponents = null;
     SpringJoint2D[] armTargetSpringJoints = null;
     CharacterHand[] handComponents = null;
@@ -63,14 +66,35 @@ public class CharacterMovement : MonoBehaviour
         handComponents = GetComponentsInChildren<CharacterHand>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (jumpState == JumpState.Jumping && RigidBody.velocity.y < 0)
+        if (jumpState == JumpState.Jumping && RigidBody.velocity.y < 0 && previousVelocity.y > 0)
         {
-            jumpState = JumpState.Falling;
+            ChangeJumpState(JumpState.Falling);
+        }
+        else if (jumpState == JumpState.Grounded)
+        {
+            if (IsAnyLegTouchingGround())
+            {
+                notGroundedTime = 0;
+            }
+            else if (RigidBody.velocity.y < 0)
+            {
+                notGroundedTime += Time.fixedDeltaTime;
+                if (notGroundedTime >= coyoteTime)
+                {
+                    ChangeJumpState(JumpState.Falling);
+                }
+            }
+        }
+        else if (jumpState == JumpState.Falling && IsAnyLegTouchingGround())
+        {
+            ChangeJumpState(JumpState.Grounded);
         }
 
-        if (jumpState == JumpState.Falling)
+        previousVelocity = RigidBody.velocity;
+
+        /*if (jumpState == JumpState.Falling)
         {
             for(int i = 0; i < groundedCheckRigidbodies.Length; i++)
             {
@@ -92,22 +116,23 @@ public class CharacterMovement : MonoBehaviour
                     {
                         jumpState = JumpState.Grounded;
                         Animator.SetBool("IsGrounded", true);
+                        break;
                     }
                 }
             }
-        }
+        }*/
     }
 
     public void Move(float value)
     {
-        if ((IsFacingRight && value < -flipDeadZone) || (!IsFacingRight && value > flipDeadZone))
+        if ((isFacingRight && value < -flipDeadZone) || (!isFacingRight && value > flipDeadZone))
         {
             foreach(Flipable element in flipableComponents)
             {
-                element.SetFlip(IsFacingRight);
+                element.SetFlip(isFacingRight);
             }
 
-            IsFacingRight = !IsFacingRight;
+            isFacingRight = !isFacingRight;
         }
         
         if (Mathf.Abs(RigidBody.velocity.x) < maxSpeed)
@@ -138,9 +163,7 @@ public class CharacterMovement : MonoBehaviour
         if (jumpState == JumpState.Grounded)
         {   
             RigidBody.AddForce(new Vector2(0.0f, jumpForce * RigidBody.mass));
-            jumpState = JumpState.Jumping;
-            Animator.SetBool("IsGrounded", false);
-            Debug.Log("jump");
+            ChangeJumpState(JumpState.Jumping);
         }
     }
 
@@ -150,5 +173,43 @@ public class CharacterMovement : MonoBehaviour
         {
             handComponents[i].SetHandGrab(value);
         }   
+    }
+
+    bool IsAnyLegTouchingGround()
+    {
+        for(int i = 0; i < groundedCheckRigidbodies.Length; i++)
+        {
+            if (groundedCheckRigidbodies[i].IsTouching(groundedContactFilter))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    void ChangeJumpState(JumpState newState)
+    {
+        Debug.LogWarning(jumpState + " => " + newState);
+
+        // OnExit
+        switch(jumpState)
+        {
+            case JumpState.Grounded:
+                Animator.SetBool("IsGrounded", false);
+                notGroundedTime = 0;
+                break;
+        }
+
+        //OnEnter
+        switch(newState)
+        {
+            case JumpState.Grounded:
+                Animator.SetBool("IsGrounded", true);
+                notGroundedTime = 0;
+                break;
+        }
+
+        jumpState = newState;
     }
 }
