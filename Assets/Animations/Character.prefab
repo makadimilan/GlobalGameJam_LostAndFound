@@ -97,7 +97,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.01
   m_LinearDrag: 0.3
   m_AngularDrag: 0.05
   m_GravityScale: 2
@@ -121,7 +121,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.3449994, y: -0.04999382}
+  m_ConnectedAnchor: {x: 1.345, y: -0.04999987}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -933,7 +933,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 2.5719984, y: -0.004994392}
+  m_ConnectedAnchor: {x: 2.5719998, y: -0.004999339}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1117,7 +1117,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 8028485965809540064}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 2.5130045, y: -0.08700032}
   m_UseMotor: 0
@@ -1269,7 +1269,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 4
   m_LinearDrag: 0.3
   m_AngularDrag: 0.05
   m_GravityScale: 2
@@ -1293,7 +1293,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.000000029612645, y: -0.000000038129066}
-  m_ConnectedAnchor: {x: -0.78199863, y: 0.000001400709}
+  m_ConnectedAnchor: {x: -0.78199995, y: 0.000000104308114}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1493,7 +1493,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.8299985, y: -0.00000566244}
+  m_ConnectedAnchor: {x: 1.83, y: 0.00000029802317}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1570,7 +1570,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.43, y: 0.022111995}
-  m_ConnectedAnchor: {x: 192.0195, y: -62.682228}
+  m_ConnectedAnchor: {x: -0.38049215, y: 0.3177728}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1804,7 +1804,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.8269953, y: 0.05300539}
+  m_ConnectedAnchor: {x: 1.8269997, y: 0.052999966}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1934,7 +1934,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 0.2
   m_LinearDrag: 0.3
   m_AngularDrag: 0.2
   m_GravityScale: 2
@@ -1956,7 +1956,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 8028485964439655071}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.9700015, y: -0.0000031143422}
   m_UseMotor: 0
@@ -2197,7 +2197,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.9100009, y: -0.000009089709}
+  m_ConnectedAnchor: {x: 1.91, y: -0.000000029802326}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2274,7 +2274,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.38, y: 0}
-  m_ConnectedAnchor: {x: 187.3254, y: -63.272823}
+  m_ConnectedAnchor: {x: -5.074593, y: -0.27282616}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2436,7 +2436,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.5930014, y: -0.6859948}
+  m_ConnectedAnchor: {x: 0.593, y: -0.6859999}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2627,7 +2627,7 @@ SpringJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 1.37, y: 0}
-  m_ConnectedAnchor: {x: -0.13778687, y: -0.33694458}
+  m_ConnectedAnchor: {x: -0.13778687, y: 0.02}
   m_AutoConfigureDistance: 0
   m_Distance: 0.005
   m_DampingRatio: 0.9
@@ -2805,7 +2805,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.7969997, y: 0.06800709}
+  m_ConnectedAnchor: {x: 1.7969997, y: 0.068000294}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2988,7 +2988,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.662, y: 0.6860007}
+  m_ConnectedAnchor: {x: 0.6619999, y: 0.686}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3174,7 +3174,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 2.490002, y: -0.015992992}
+  m_ConnectedAnchor: {x: 2.4899986, y: -0.016000219}
   m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 10
@@ -3376,7 +3376,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.5400005, y: 0.5699964}
+  m_ConnectedAnchor: {x: 0.5399999, y: 0.57000005}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3558,7 +3558,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.5399986, y: -0.56999934}
+  m_ConnectedAnchor: {x: 0.5399999, y: -0.56999993}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3740,7 +3740,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 2.5320008, y: -0.09799243}
+  m_ConnectedAnchor: {x: 2.5319996, y: -0.09799955}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3842,10 +3842,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb26f42b1bb6112419b7165f7966e7c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 8
+  moveForce: 6
   inAirMoveForceMultiplier: 1
   maxSpeed: 7
-  jumpForce: 1300
+  jumpForce: 1150
   coyoteTime: 0.2
   flipDeadZone: 0.05
   groundedCheckRigidbodies:
