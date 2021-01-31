@@ -121,7 +121,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.345, y: -0.04999987}
+  m_ConnectedAnchor: {x: 1.3449997, y: -0.04999996}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -933,7 +933,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 2.5719998, y: -0.004999339}
+  m_ConnectedAnchor: {x: 2.5719998, y: -0.0049992795}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1293,7 +1293,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.000000029612645, y: -0.000000038129066}
-  m_ConnectedAnchor: {x: -0.78199995, y: 0.000000104308114}
+  m_ConnectedAnchor: {x: -0.78199995, y: 0.00000002235174}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1570,7 +1570,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.43, y: 0.022111995}
-  m_ConnectedAnchor: {x: -0.38049215, y: 0.3177728}
+  m_ConnectedAnchor: {x: 2.6195078, y: 0.617773}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1804,7 +1804,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.8269997, y: 0.052999966}
+  m_ConnectedAnchor: {x: 1.8269997, y: 0.053000025}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2197,7 +2197,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.91, y: -0.000000029802326}
+  m_ConnectedAnchor: {x: 1.9099998, y: 0.00000020861627}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2274,7 +2274,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.38, y: 0}
-  m_ConnectedAnchor: {x: -5.074593, y: -0.27282616}
+  m_ConnectedAnchor: {x: -2.074593, y: 0.027174026}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2436,7 +2436,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.593, y: -0.6859999}
+  m_ConnectedAnchor: {x: 0.593, y: -0.68599993}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2805,7 +2805,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.7969997, y: 0.068000294}
+  m_ConnectedAnchor: {x: 1.7969996, y: 0.068000235}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2988,7 +2988,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.6619999, y: 0.686}
+  m_ConnectedAnchor: {x: 0.6619999, y: 0.68600005}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3175,7 +3175,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 2.4899986, y: -0.016000219}
-  m_UseMotor: 1
+  m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 10
     m_MaximumMotorForce: 10000
@@ -3376,7 +3376,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.5399999, y: 0.57000005}
+  m_ConnectedAnchor: {x: 0.5399999, y: 0.5699999}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3558,7 +3558,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.5399999, y: -0.56999993}
+  m_ConnectedAnchor: {x: 0.5399999, y: -0.57}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3740,7 +3740,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 2.5319996, y: -0.09799955}
+  m_ConnectedAnchor: {x: 2.5319996, y: -0.09799961}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3787,7 +3787,7 @@ GameObject:
   - component: {fileID: 7094325294439155347}
   m_Layer: 6
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
