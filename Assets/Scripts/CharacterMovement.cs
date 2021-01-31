@@ -15,7 +15,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] Rigidbody2D armTarget = null; 
     [SerializeField] float armTargetLenght = 1;
     [SerializeField] AnimationCurve armTargeFrequency = AnimationCurve.Linear(0,0, 1,1);
-    [SerializeField] SpringJoint2D BodyJoint = null;
+    [SerializeField] Transform BodyTransforom = null;
     [SerializeField] float maxDistance = 1f;
 
     enum JumpState 
@@ -137,7 +137,7 @@ public class CharacterMovement : MonoBehaviour
             isFacingRight = !isFacingRight;
         }
         
-        if (Mathf.Abs(RigidBody.velocity.x) < maxSpeed && BodyJoint.distance < maxDistance)
+        if (Mathf.Abs(RigidBody.velocity.x) < maxSpeed && Mathf.Abs(BodyTransforom.position.x - transform.position.x) < maxDistance)
         {
             RigidBody.AddForce(new Vector2(value * moveForce * RigidBody.mass, 0.0f));
         }
@@ -234,7 +234,7 @@ public class CharacterMovement : MonoBehaviour
 
     void OnDrawGizmosSelected() 
     {
-        if (Mathf.Abs(RigidBody.velocity.x) >= maxSpeed || BodyJoint.distance >= maxDistance)
+        if (Mathf.Abs(RigidBody.velocity.x) >= maxSpeed || Mathf.Abs(BodyTransforom.position.x - transform.position.x) >= maxDistance)
         {
             Gizmos.color = Color.red;
             Gizmos.DrawSphere(transform.position, 1);
