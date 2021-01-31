@@ -15,6 +15,13 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] float armTargetLenght = 1;
     [SerializeField] AnimationCurve armTargeFrequency = AnimationCurve.Linear(0,0, 1,1);
 
+    enum JumpState 
+    {
+        Grounded,
+        Jumping,
+        Falling
+    }
+
     [SerializeField, HideInInspector] Rigidbody2D _rigidBody = null;
     public Rigidbody2D RigidBody
     {
@@ -43,7 +50,7 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    bool canJump = false;
+    JumpState jumpState = JumpState.Falling;
     bool IsFacingRight = true;
     Flipable[] flipableComponents = null;
     SpringJoint2D[] armTargetSpringJoints = null;
@@ -58,12 +65,35 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        for(int i = 0; i < groundedCheckRigidbodies.Length; i++)
+        if (jumpState == JumpState.Jumping && RigidBody.velocity.y < 0)
         {
-            if (!canJump && groundedCheckRigidbodies[i].IsTouching(groundedContactFilter) && groundedCheckRigidbodies[i].velocity.y <= 0)
+            jumpState = JumpState.Falling;
+        }
+
+        if (jumpState == JumpState.Falling)
+        {
+            for(int i = 0; i < groundedCheckRigidbodies.Length; i++)
             {
-                canJump = true;
-                Animator.SetBool("IsGrounded", true);
+                ContactPoint2D[] contacts = new ContactPoint2D[1];
+                if (groundedCheckRigidbodies[i].GetContacts(groundedContactFilter, contacts) > 0)
+                {
+                    bool isValidGround = true;
+                    for(int j = 0; j < handComponents.Length; j++)
+                    {
+                        Rigidbody2D otherRB = contacts[0].otherRigidbody;
+                        if (otherRB != null && otherRB == handComponents[j].GetGrabbedObject())
+                        {
+                            isValidGround = false;
+                            break;
+                        }
+                    }
+
+                    if (isValidGround)
+                    {
+                        jumpState = JumpState.Grounded;
+                        Animator.SetBool("IsGrounded", true);
+                    }
+                }
             }
         }
     }
@@ -105,11 +135,12 @@ public class CharacterMovement : MonoBehaviour
 
     public void Jump()
     {
-        if (canJump)
+        if (jumpState == JumpState.Grounded)
         {   
             RigidBody.AddForce(new Vector2(0.0f, jumpForce * RigidBody.mass));
-            canJump = false;
+            jumpState = JumpState.Jumping;
             Animator.SetBool("IsGrounded", false);
+            Debug.Log("jump");
         }
     }
 

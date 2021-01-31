@@ -85,4 +85,9 @@ public class CharacterHand : MonoBehaviour
         grabJoint.connectedBody = null;
         grabJoint.enabled = false;
     }
+
+    public Rigidbody2D GetGrabbedObject()
+    {
+        return grabJoint.isActiveAndEnabled ? grabJoint.connectedBody : null;
+    }
 }
