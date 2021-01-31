@@ -179,9 +179,13 @@ public class CharacterMovement : MonoBehaviour
     {
         for(int i = 0; i < groundedCheckRigidbodies.Length; i++)
         {
-            if (groundedCheckRigidbodies[i].IsTouching(groundedContactFilter))
+            ContactPoint2D[] contacts = new ContactPoint2D[1];
+            if (groundedCheckRigidbodies[i].GetContacts(groundedContactFilter, contacts) > 0)
             {
-                return true;
+                if (!IsGrabbedObject(contacts[0].rigidbody))
+                {
+                    return true;
+                }
             }
         }
 
@@ -211,5 +215,18 @@ public class CharacterMovement : MonoBehaviour
         }
 
         jumpState = newState;
+    }
+
+    bool IsGrabbedObject(Rigidbody2D rb)
+    {
+        for(int j = 0; j < handComponents.Length; j++)
+        {
+            if (handComponents[j].GetGrabbedObject() != null && handComponents[j].GetGrabbedObject() == rb)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
