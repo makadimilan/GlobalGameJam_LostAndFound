@@ -1580,7 +1580,7 @@ Transform:
   - {fileID: 611572795}
   - {fileID: 1916327905}
   - {fileID: 13039698}
-  - {fileID: 756088662}
+  - {fileID: 883843675}
   - {fileID: 98198202}
   - {fileID: 2144594711}
   - {fileID: 450817860}
@@ -7619,13 +7619,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756088661}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 196, y: -46.2, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -15.5320015, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2035697076}
-  m_Father: {fileID: 349659744}
-  m_RootOrder: 8
+  m_Father: {fileID: 883843675}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &756088663
 SpriteRenderer:
@@ -7672,7 +7672,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 0.56, y: 71.3804}
+  m_Size: {x: 0.56, y: 15.91}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -7729,12 +7729,12 @@ HingeJoint2D:
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
+  m_ConnectedRigidBody: {fileID: 883843676}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.023376465, y: 15.739471}
-  m_ConnectedAnchor: {x: 196.02338, y: -30.46053}
+  m_ConnectedAnchor: {x: 0.023376465, y: 0.20746994}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -8702,6 +8702,59 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &883843674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 883843675}
+  - component: {fileID: 883843676}
+  m_Layer: 0
+  m_Name: RopeAnimator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &883843675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883843674}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 196, y: -26.668, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 756088662}
+  m_Father: {fileID: 349659744}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &883843676
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883843674}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &970599394
 GameObject:
   m_ObjectHideFlags: 0
@@ -15105,7 +15158,7 @@ AreaEffector2D:
   m_ForceMagnitude: 0
   m_ForceVariation: 0
   m_ForceTarget: 0
-  m_Drag: 20
+  m_Drag: 17
   m_AngularDrag: 17
 --- !u!1001 &8028485963898210774
 PrefabInstance:
@@ -15212,7 +15265,7 @@ PrefabInstance:
     - target: {fileID: 8028485965847445631, guid: 52a4c6663159fe441a29d021f1eb739b,
         type: 3}
       propertyPath: jumpForce
-      value: 1500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 8028485965847445631, guid: 52a4c6663159fe441a29d021f1eb739b,
         type: 3}
@@ -15227,7 +15280,7 @@ PrefabInstance:
     - target: {fileID: 8028485965847445631, guid: 52a4c6663159fe441a29d021f1eb739b,
         type: 3}
       propertyPath: inAirMoveForceMultiplier
-      value: 1
+      value: 0.762
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52a4c6663159fe441a29d021f1eb739b, type: 3}
