@@ -17296,6 +17296,65 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 816133871, guid: 52a4c6663159fe441a29d021f1eb739b, type: 3}
+      propertyPath: m_Frequency
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 937627398, guid: 52a4c6663159fe441a29d021f1eb739b, type: 3}
+      propertyPath: m_Frequency
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1585889113, guid: 52a4c6663159fe441a29d021f1eb739b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 1585889116, guid: 52a4c6663159fe441a29d021f1eb739b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674264689, guid: 52a4c6663159fe441a29d021f1eb739b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674264692, guid: 52a4c6663159fe441a29d021f1eb739b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028485963767437121, guid: 52a4c6663159fe441a29d021f1eb739b,
+        type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 138.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028485964439655069, guid: 52a4c6663159fe441a29d021f1eb739b,
+        type: 3}
+      propertyPath: m_Anchor.y
+      value: -0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028485964439655069, guid: 52a4c6663159fe441a29d021f1eb739b,
+        type: 3}
+      propertyPath: m_Distance
+      value: 0.64196277
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028485964439655069, guid: 52a4c6663159fe441a29d021f1eb739b,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028485964439655069, guid: 52a4c6663159fe441a29d021f1eb739b,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028485964439655069, guid: 52a4c6663159fe441a29d021f1eb739b,
+        type: 3}
+      propertyPath: m_AutoConfigureDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028485965809540066, guid: 52a4c6663159fe441a29d021f1eb739b,
+        type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 136.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8028485965847445618, guid: 52a4c6663159fe441a29d021f1eb739b,
         type: 3}
       propertyPath: m_Name
@@ -17358,8 +17417,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8028485965847445631, guid: 52a4c6663159fe441a29d021f1eb739b,
         type: 3}
+      propertyPath: maxSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028485965847445631, guid: 52a4c6663159fe441a29d021f1eb739b,
+        type: 3}
       propertyPath: moveForce
-      value: 30
+      value: 33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52a4c6663159fe441a29d021f1eb739b, type: 3}
